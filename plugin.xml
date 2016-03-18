@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="com-weclass-ios-setting" version="1.0.0">
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <name>IOS Setting</name>
+    <description>Plugin for IOS Default Setting</description>
+    <author>Jianye Xu</author>
+    <keywords>IOS Setting</keywords>
+    <license>MIT</license>
+
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+            <string>zh_CN</string>
+        </config-file>
+        <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>remote-notification</string>
+            </array>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UIRequiresFullScreen">
+            <true/>
+        </config-file>
+        <config-file target="*-Info.plist" parent="UISupportedInterfaceOrientations">
+            <array>
+                <string>UIInterfaceOrientationPortrait</string>
+            </array>
+        </config-file>
+    </platform>
+</plugin>
